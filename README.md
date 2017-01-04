@@ -5,7 +5,7 @@ Python 2.7.13 + Nginx + uWSGI + Django on Openshift
 Setting up Openshift
 --------------------
 
-Create the Openshift application with a DIY and Postgresql 8.4 cartridge (also works on MySQL and SQLite out-of-the-box):
+Create the Openshift application with a DIY and Postgresql 9.2 cartridge (also works on MySQL and SQLite out-of-the-box):
 
     $ rhc app create <exampleapp> diy-0.1 postgresql-9.2
     $ cd <exampleapp>
