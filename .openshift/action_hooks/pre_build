@@ -5,15 +5,14 @@
 # could be python, php, ruby, etc.
 
 PYTHON_VERSION="2.7.13"
-VIRTUALENV_VERSION="15.1.0"
 PCRE_VERSION="8.39"
 NGINX_VERSION="1.10.1"
 
 PYTHON_CURRENT=`${OPENSHIFT_DATA_DIR}/bin/python -c 'import sys; print(".".join(map(str, sys.version_info[:3])))'`
 if [ "$PYTHON_CURRENT" != "$PYTHON_VERSION" ]; then
 	cd $OPENSHIFT_TMP_DIR
-	wget http://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tar.bz2
-	tar jxf Python-${PYTHON_VERSION}.tar.bz2
+	wget http://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tgz
+	tar -xf Python-${PYTHON_VERSION}.tgz
 	cd Python-${PYTHON_VERSION}
 	./configure --prefix=$OPENSHIFT_DATA_DIR
 	make install
@@ -21,9 +20,9 @@ fi
   
 if [ ! -d $OPENSHIFT_DATA_DIR/virtualenv ]; then
 	cd $OPENSHIFT_TMP_DIR
-	wget https://pypi.python.org/packages/source/v/virtualenv/virtualenv-${VIRTUALENV_VERSION}.tar.gz
-	tar zxf virtualenv-${VIRTUALENV_VERSION}.tar.gz
-	cd virtualenv-${VIRTUALENV_VERSION}
+	wget https://pypi.python.org/packages/d4/0c/9840c08189e030873387a73b90ada981885010dd9aea134d6de30cd24cb8/virtualenv-15.1.0.tar.gz
+	tar zxf virtualenv-15.1.0.tar.gz
+	cd virtualenv-15.1.0
 	$OPENSHIFT_DATA_DIR/bin/python virtualenv.py $OPENSHIFT_DATA_DIR/virtualenv
 fi
 
