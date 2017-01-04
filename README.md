@@ -28,7 +28,7 @@ Pre build stage
 The 'pre_build' hook script performs the following actions:
 * Installs Python 2.7.13
 * Installs Virtualenv 15.1.0 and creates virtualenv in $OPENSHIFT_DATA_DIR/virtualenv
-* Installs Nginx 1.10.1
+* Installs Nginx 1.10.1 with PCRE
 
 You can install any version as you want, just change versions variables in this script
 
