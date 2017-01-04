@@ -1,6 +1,10 @@
 Python 2.7.13 + Nginx + uWSGI + Django on Openshift
 ==================================================
 
+Demo
+----
+http://python-rezha.rhcloud.com/
+[![asciicast](https://asciinema.org/a/98095.png)](https://asciinema.org/a/98095)
 
 Setting up Openshift
 --------------------
