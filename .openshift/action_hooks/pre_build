@@ -14,7 +14,7 @@ if [ "$PYTHON_CURRENT" != "$PYTHON_VERSION" ]; then
 	wget http://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tgz
 	tar -xvf Python-${PYTHON_VERSION}.tgz
 	cd Python-${PYTHON_VERSION}
-	./configure --prefix=$OPENSHIFT_DATA_DIR
+	./configure --prefix=$OPENSHIFT_DATA_DIR --enable-optimizations
 	make install
 fi
   

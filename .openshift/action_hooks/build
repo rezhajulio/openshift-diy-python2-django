@@ -5,4 +5,5 @@
 # could be python, php, ruby, etc.
 
 source $OPENSHIFT_DATA_DIR/virtualenv/bin/activate
-pip install --use-mirrors -r $OPENSHIFT_REPO_DIR/requirements.txt
+pip install -U pip setuptools wheel
+pip install -r $OPENSHIFT_REPO_DIR/requirements.txt
