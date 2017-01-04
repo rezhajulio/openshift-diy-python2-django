@@ -14,7 +14,7 @@ if [ "$PYTHON_CURRENT" != "$PYTHON_VERSION" ]; then
 	wget http://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tgz
 	tar -xvf Python-${PYTHON_VERSION}.tgz
 	cd Python-${PYTHON_VERSION}
-	./configure --prefix=$OPENSHIFT_DATA_DIR --enable-optimizations
+	./configure --prefix=$OPENSHIFT_DATA_DIR
 	make install
 fi
   
@@ -23,7 +23,7 @@ if [ ! -d $OPENSHIFT_DATA_DIR/virtualenv ]; then
 	wget https://pypi.python.org/packages/d4/0c/9840c08189e030873387a73b90ada981885010dd9aea134d6de30cd24cb8/virtualenv-15.1.0.tar.gz
 	tar -xvf virtualenv-15.1.0.tar.gz
 	cd virtualenv-15.1.0
-	$OPENSHIFT_DATA_DIR/bin/python virtualenv.py $OPENSHIFT_DATA_DIR/virtualenv
+	$OPENSHIFT_DATA_DIR/bin/python2.7 virtualenv.py $OPENSHIFT_DATA_DIR/virtualenv
 fi
 
 if [ ! -d $OPENSHIFT_DATA_DIR/nginx/sbin ]; then
