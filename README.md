@@ -1,6 +1,9 @@
 Python 2.7.13 + Nginx + uWSGI + Django on Openshift
 ==================================================
 
+# DEPRECATED
+# OPENSHIFT2 HAS BEEN SHUTDOWN ON 30 SEPTEMBER 2017
+
 Demo
 ----
 http://python-rezha.rhcloud.com/
